@@ -79,15 +79,8 @@
 
                     <form action="">
                         <!--  General -->
-                        <h2 class="heading">Personal Information</h2>
-                        <div class="controls">
-                          <input type="text" id="name" class="floatLabel" name="name">
-                          <label for="name"><i class="fa fa-male"></i>&nbsp;&nbsp;Name</label>
-                        </div>
-                        <div class="controls">
-                          <input type="text" id="email" class="floatLabel" name="email">
-                          <label for="email"><i class="fa fa-envelope"></i>&nbsp;&nbsp;Email</label>
-                        </div>       
+                        <h2 class="heading">Event Information</h2>
+
 
                     <div class="grid" style="clear: none;">
 
@@ -110,8 +103,8 @@
                     <div class="grid">
                         <div class="col-2-3">
                           <div class="controls">
-                            <input type="text" id="location" class="floatLabel" name="location">
-                            <label for="location"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Event Location</label>
+                            <input type="text" id="autocomplete" class="floatLabel" name="location">
+                            <label for="autocomplete"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Event Location</label>
                           </div>         
                         </div>
                     </div>
@@ -269,7 +262,8 @@
             </div>
         </footer>
         <!-- End footer Area -->
-
+        <script type="text/javascript" src="js/location.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7TMTdyDNEeXwvrqiwEQpkRMp6O6vD0kU&libraries=places&callback=initialize"></script>
         <script src="js/vendor/jquery-2.2.4.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
         <script src="js/vendor/bootstrap.min.js"></script>

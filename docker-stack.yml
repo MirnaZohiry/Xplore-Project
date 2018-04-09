@@ -1,22 +1,17 @@
 version: '3'
 
 services:
-  api:
-    build: './api'
-    ports:
-        - "3000:3000"
-
-  web-service:
-    build: './web'
+  web:
+    image: 'xploreproject_web'
     ports:
         - "80:80"
         - "443:443"
-  auth-service:
-    build: './auth'
+  auth:
+    image: 'xploreproject_auth'
     ports:
         - "3030:3030"
-  user-service:
-    build: './user'
+  user:
+    image: 'xploreproject_user'
     ports:
         - "3031:3030"
     environment:

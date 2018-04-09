@@ -334,7 +334,7 @@
 			<script src="js/jquery.sticky.js"></script>
 			<script src="js/parallax.min.js"></script>
 			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-			<script src="js/countdown.js"></script>
+
 			<script src="js/jquery.magnific-popup.min.js"></script>
 			<script src="js/toggle.js"></script>
 			<script src="js/main.js"></script>
