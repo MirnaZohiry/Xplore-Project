@@ -67,34 +67,29 @@
                       <div class="col-1-3 col-1-3-sm">
                       <div class="controls">
                         <i class="fa fa-sort"></i>
-                        <select class="floatLabel pdg">
-                          <option value="blank"></option>
-                          <option value="1">1</option>
-                          <option value="2" selected>2</option>
-                          <option value="3">3</option>
+                        <select class="floatLabel pdg" id="activitySelect">
+                          <option value="blank" selected></option>
+                          <option value="restaurant">restaurant</option>
+                          <option value="cafe" >cafe</option>
+                          <option value="museum">museum</option>
                         </select>
                         <label for="fruit"><i class="fa fa-tasks"></i>&nbsp;&nbsp;Activity</label>
                       </div>      
                     </div>
-  
+
                     <div class="col-1-3 col-1-3-sm">
-                    <div class="controls">
-                    <i class="fa fa-sort"></i>
-                    <select class="floatLabel pdg">
-                      <option value="blank"></option>
-                      <option value="1">1</option>
-                      <option value="2" selected>2</option>
-                      <option value="3">3</option>
-                    </select>
-                    <label for="fruit"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Location</label>
-                    </div>      
+                      <div class="controls" id="locationField">
+                        <input type="text" id="autocomplete" class="floatLabel" name="autocomplete" placeholder="" style="width: 100%; height: 50px;">
+                        <label for="fruit"><i class="fa fa-map"></i>&nbsp;&nbsp;Location</label>
+                      </div>      
                     </div>
 
-  
-                    <div class="col-1-3 col-1-3-sm">
+
+                     <div class="col-1-3 col-1-3-sm">
                         <button type="submit" value="Submit" class="btn" style="padding-bottom: 16px;"><i class="fa fa-search"></i>&nbsp;Search</button>
                     </div>
   
+                    
   
                       </div>
                   </div>
@@ -105,74 +100,21 @@
 
         <!-- Start Filter Area -->
         <section>
-            <div class="container">
-                <div class="wrapper justify-content-center" style="text-align: left; font-size: 12px;" >
-                  <div class="box sidebar"></div>
-                  <div class="box content fonting">
-                    <h class="hd" style="font-size: 18px;">Junior Place</h>
-                    <p>The four arrows are inline images inside the content area.</p>
-                    <ul class="uldesign">
-                      <li type="square">Coffee</li>
-                      <li type="square">Tea</li>
-                      <li type="square">Milk</li>
-                    </ul>
-                  </div>
-                </div>
-                <hr width="50%">
+            <div class="container" id="listing-results">
 
-                <div class="wrapper justify-content-center" style="text-align: left; font-size: 12px;" >
-                  <div class="box sidebar"></div>
-                  <div class="box content fonting">
-                    <h class="hd" style="font-size: 18px;">Junior Place</h>
-                    <p>The four arrows are inline images inside the content area.</p>
-                    <ul class="uldesign">
-                      <li type="square">Coffee</li>
-                      <li type="square">Tea</li>
-                      <li type="square">Milk</li>
-                    </ul> 
-                  </div>
-                </div>
-                <hr width="50%">
-
-
-                <div class="wrapper justify-content-center" style="text-align: left; font-size: 12px;" >
-                  <div class="box sidebar"></div>
-                  <div class="box content fonting">
-                    <h class="hd" style="font-size: 18px;">Junior Place</h>
-                    <p>The four arrows are inline images inside the content area.</p>
-                    <ul class="uldesign">
-                      <li type="square">Coffee</li>
-                      <li type="square">Tea</li>
-                      <li type="square">Milk</li>
-                    </ul> 
-                  </div>
-                </div>
-                <hr width="50%">
-
-                <div class="wrapper justify-content-center" style="text-align: left; font-size: 12px;" >
-                  <div class="box sidebar"></div>
-                  <div class="box content fonting">
-                    <h class="hd" style="font-size: 18px;">Junior Place</h>
-                    <p>The four arrows are inline images inside the content area.</p>
-                    <ul class="uldesign">
-                      <li type="square">Coffee</li>
-                      <li type="square">Tea</li>
-                      <li type="square">Milk</li>
-                    </ul> 
-                  </div>
-                </div>
-                <hr width="50%">
                 <br/>
             </div>
         </section>
         <!-- End Filter Area -->
 
+        <div id="map"></div>
+
         <!-- Start Pagination Area -->
         <div class="center">
           <div class="pagination">
             <a href="#">&laquo;</a>
-            <a href="#">1</a>
-            <a href="#" class="active">2</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
             <a href="#">3</a>
             <a href="#">4</a>
             <a href="#">5</a>
@@ -197,7 +139,9 @@
             </div>
         </footer>
         <!-- End footer Area -->
-
+         <script type="text/javascript" src="js/location.js"></script>
+        <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBK35lBiyCDm5oNdJrpOuXcLKeNz0FPpdc&libraries=places&callback=initialize"></script>-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7TMTdyDNEeXwvrqiwEQpkRMp6O6vD0kU&libraries=places&callback=initialize"></script>
         <script src="js/vendor/jquery-2.2.4.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
@@ -211,6 +155,7 @@
         <script src="js/toggle.js"></script>
         <script src="js/main.js"></script>
         <script src="js/date-select.js"></script>
+       
 
     </body>
 </html>
