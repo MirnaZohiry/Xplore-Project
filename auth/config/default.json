@@ -1,0 +1,34 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "authentication": {
+    "secret": "d4f8cd32a814abe653dff264c74241c6f512929138a8a3270bdb7a4a2f4223a7bded07e73e412c5fb584635c6b0ba63eee852f356823631584fc5dfa967981f0cc124cd7449c200841dd9b1fe2bb036ebcae916c056c89c57f6ee6ab3779471e7bb92e9e8459a6287ef848d7db9246b22a2860049214716d29295b3e9774cef27d8dc90ee37d1e7d3383d3e79e0022fa02e0a67634127de2bc2d1f593f5e93b90bd17547d25c46855f9862a45c005c13fd2296bf9385a4da592d576a6f6dff36546cb4c215b17b13b864f63e0180e55e0fe7cf79cc0331e9a3404866f755547c706abf1f25f480da7ac6491a1449fd2294d6f72f71e02722835f1adc3d285770",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  },
+  "mysql": "mysql://root:University@xplore-user.cb3sgsj6hke0.us-east-2.rds.amazonaws.com:3306/user"
+}

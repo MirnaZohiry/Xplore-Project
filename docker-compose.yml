@@ -9,4 +9,4 @@ services:
   auth:
     build: './auth'
     ports:
-      - "3030:80
+      - "3030:80"
